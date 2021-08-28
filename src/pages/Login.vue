@@ -1,31 +1,35 @@
 <template>
-<q-page padding class="flex justify-center content-center">  
+  <q-page padding class="flex justify-center content-center">
     <q-form class="q-gutter-y-md form-login q-pa-md rounded-borders">
-      <q-input outlined  bg-color="white" shadow-text="Insira seu e-mail" label="Usuário"/>
-      <q-input outlined  bg-color="white" shadow-text="Insira sua senha" label="Senha" type="password"/>
+      <div class="text-center">
+        <span class="text-weight-bold text-dark text-h5">Faça seu login!</span>
+      </div>
+      <m-input placeholder="Insira seu e-mail" label="Usuário" />
+      <m-input placeholder="Insira sua senha" label="Senha" type="password" />
       <div>
-        <q-btn
-          color="black"
-          label="Entrar"
-          class="full-width"
-        />
+        <m-btn label="Entrar" @click="logar()" />
       </div>
 
-		<div>
-			<span class="text-weight-bold text-dark">Não possui conta?</span> 
-       <router-link to="/cadastro" class="text-negative text-h6">CADASTRE-SE</router-link>
-		</div>
+      <div>
+        <span class="text-weight-bold text-dark">Não possui conta?</span>
+        <router-link to="/cadastro" class="text-negative text-h6"
+          >CADASTRE-SE</router-link
+        >
+      </div>
     </q-form>
   </q-page>
 </template>
 
 <script>
+import MInput from "components/MInput";
+import MBtn from "components/MBtn";
 export default {
+  components: { MInput, MBtn },
   // name: 'PageName',
-}
+};
 </script>
 <style scoped>
-  .form-login {
-    background-color: rgba(254, 254, 254, 0.5);
-  }
+.form-login {
+  background-color: rgba(254, 254, 254, 0.5);
+}
 </style>

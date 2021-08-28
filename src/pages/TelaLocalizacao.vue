@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <h1> Localização </h1>
+    <h3> Localização </h3>
   </q-page>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <!-- content -->
+    <h1> Relatar </h1>
   </q-page>
 </template>
 
