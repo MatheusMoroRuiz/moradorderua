@@ -4,8 +4,8 @@
       <div class="text-center">
         <span class="text-weight-bold text-dark text-h5">Faça seu login!</span>
       </div>
-      <m-input placeholder="Insira seu e-mail" label="Usuário" />
-      <m-input placeholder="Insira sua senha" label="Senha" type="password" />
+      <m-input placeholder="Insira seu e-mail" v-model="form.email" label="E-mail" />
+      <m-input placeholder="Insira sua senha" v-model="form.senha" label="Senha" type="password" />
       <div>
         <m-btn label="Entrar" @click="logar()" />
       </div>
@@ -26,6 +26,15 @@ import MBtn from "components/MBtn";
 export default {
   components: { MInput, MBtn },
   // name: 'PageName',
+
+ data(){
+    return {
+      form: {
+        email: "",
+        senha: ""
+      }
+    }
+  }
 };
 </script>
 <style scoped>

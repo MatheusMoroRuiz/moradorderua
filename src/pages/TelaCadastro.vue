@@ -6,11 +6,11 @@
     </div>
     <div class="row justify-center">
       <q-form class="q-gutter-md col-10">
-        <m-input label="Nome" />
-        <m-input label="E-mail" />
-        <m-input label="CPF/CNPJ" />
-        <m-input label="Telefone" />
-        <m-input label="Senha" />
+        <m-input v-model="form.nome" label="Nome" />
+        <m-input v-model="form.email" label="E-mail" />
+        <m-input v-model="form.cpf" label="CPF/CNPJ" />
+        <m-input v-model="form.telefone" label="Telefone" />
+        <m-input v-model="form.senha" label="Senha" type="password"/>
         <div>
           <m-btn label="CADASTRE-SE" />
         </div>
@@ -25,5 +25,17 @@ import MBtn from 'components/MBtn';
 export default {
   components: { MInput, MBtn },
   // name: 'PageName',
+
+   data(){
+    return {
+      form: {
+        nome: "",
+        email: "",
+        cpf: "",
+        telefone: "",
+        senha: ""
+      }
+    }
+  }
 };
 </script>
