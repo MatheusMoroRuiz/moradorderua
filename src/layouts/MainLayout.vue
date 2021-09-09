@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh lpR fFf">
-    <q-header>
+    <q-header class="bg-grey-7">
     <q-toolbar class="text-black">
       <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
     </q-toolbar>
@@ -15,41 +15,41 @@
           <q-list padding>
             <q-item clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="inbox" />
+                <q-icon name="volunteer_activism" />
               </q-item-section>
 
               <q-item-section>
-                Inbox
-              </q-item-section>
-            </q-item>
-
-            <q-item active clickable v-ripple>
-              <q-item-section avatar>
-                <q-icon name="star" />
-              </q-item-section>
-
-              <q-item-section>
-                Star
+                Efetuar Doação
               </q-item-section>
             </q-item>
 
             <q-item clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="send" />
+                <q-icon name="help" />
               </q-item-section>
 
               <q-item-section>
-                Send
+                Ajuda
               </q-item-section>
             </q-item>
 
             <q-item clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="drafts" />
+                <q-icon name="menu_book" />
               </q-item-section>
 
               <q-item-section>
-                Drafts
+                Politica de Privacidade
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="settings" />
+              </q-item-section>
+
+              <q-item-section>
+                Configurações
               </q-item-section>
             </q-item>
           </q-list>
