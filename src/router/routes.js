@@ -4,10 +4,10 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/TelaInicio.vue')},
-      { path: 'relatar', component: () => import('pages/TelaRelatar.vue')},
-      { path: 'localizacao', component: () => import('pages/TelaLocalizacao.vue')},
-      { path: 'ongs', component: () => import('pages/TelaOngs.vue')}
+      { path: '', component: () => import('src/pages/Inicio.vue')},
+      { path: 'relatar', component: () => import('src/pages/Relatar.vue')},
+      { path: 'localizacao', component: () => import('src/pages/Localizacao.vue')},
+      { path: 'ongs', component: () => import('src/pages/Ongs.vue')}
     ]
   },
   {
@@ -21,7 +21,7 @@ const routes = [
     path: '/cadastro',
     component: () => import('layouts/CadastroLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/TelaCadastro.vue')}
+      { path: '', component: () => import('src/pages/Cadastro.vue')}
     ]
   },
 

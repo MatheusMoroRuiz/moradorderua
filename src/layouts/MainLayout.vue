@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh lpR fFf">
+  <q-layout view="lHh lpR lFf">
     <q-header class="bg-grey-7">
     <q-toolbar class="text-black">
       <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
@@ -10,6 +10,7 @@
         show-if-above
         :width="200"
         :breakpoint="400"
+        overlay behavior="mobile"
       >
         <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
           <q-list padding>
