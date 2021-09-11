@@ -15,7 +15,7 @@
       <q-form class="q-gutter-md col-10">
         <q-select
           outlined
-          v-model="model"
+          v-model="sexo"
           :options="options"
           label="Sexo do morador"
           bg-color="white"
@@ -60,6 +60,7 @@
 export default {
   data() {
     return {
+      sexo: "",
       condicao: "",
       caracteristica: "",
       options: ["Masculino", "Feminino"],

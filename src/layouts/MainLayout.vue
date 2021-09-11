@@ -14,7 +14,7 @@
       >
         <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
           <q-list padding>
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/doacao">
               <q-item-section avatar>
                 <q-icon name="volunteer_activism" />
               </q-item-section>
@@ -24,7 +24,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/ajuda">
               <q-item-section avatar>
                 <q-icon name="help" />
               </q-item-section>
@@ -34,7 +34,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="politicaprivacidade">
               <q-item-section avatar>
                 <q-icon name="menu_book" />
               </q-item-section>
@@ -44,7 +44,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/configuracoes">
               <q-item-section avatar>
                 <q-icon name="settings" />
               </q-item-section>

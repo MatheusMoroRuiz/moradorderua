@@ -1,15 +1,11 @@
 <template>
   <q-page padding>
-    <h1> Início </h1>
-    <q-btn class="shadow-19" label="login" to="/login"/> 
+    <q-btn flat round dense icon="arrow_back" to="/" class="text-h5" label="Politica de privacidade"/>
   </q-page>
 </template>
 
 <script>
 export default {
   // name: 'PageName',
-  data() {
-    return {};
-  },
 }
 </script>

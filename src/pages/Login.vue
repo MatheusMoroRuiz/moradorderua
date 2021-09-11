@@ -1,6 +1,6 @@
 <template>
   <q-page padding class="flex justify-center content-center">
-    <q-form class="q-gutter-y-md form-login q-pa-md rounded-borders">
+    <q-form class="q-gutter-y-md form-login shadow-24 shadow-up-24  q-pa-md rounded-borders">
       <div class="text-center">
         <span class="text-weight-bold text-dark text-h5">Faça seu login!</span>
       </div>

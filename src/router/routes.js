@@ -21,7 +21,11 @@ const routes = [
     path: '/cadastro',
     component: () => import('layouts/CadastroLayout.vue'),
     children: [
-      { path: '', component: () => import('src/pages/Cadastro.vue')}
+      { path: '', component: () => import('src/pages/Cadastro.vue')},
+      { path: '/doacao', component: () => import('src/pages/Doacao.vue')},
+      { path: '/ajuda', component: () => import('src/pages/Ajuda.vue')},
+      { path: '/configuracoes', component: () => import('src/pages/Configuracoes.vue')},
+      { path: '/politicaprivacidade', component: () => import('src/pages/PoliticaPrivacidade.vue')}
     ]
   },
 
