@@ -26,7 +26,7 @@
               <q-icon name="volunteer_activism" />
             </q-item-section>
 
-            <q-item-section> Efetuar Doação </q-item-section>
+            <q-item-section> Como posso ajudar? </q-item-section>
           </q-item>
 
           <q-item clickable v-ripple to="/ajuda">

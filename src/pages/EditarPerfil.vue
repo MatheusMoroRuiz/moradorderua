@@ -45,7 +45,7 @@
       />
       </div>
       <div>
-      <q-btn class="full-width" size="md" color="black" label="SALVAR ALTERAÇÃO"/>
+      <q-btn class="full-width" size="md" color="black" label="SALVAR ALTERAÇÕES"/>
       </div>
     </q-form>
   </q-page>
