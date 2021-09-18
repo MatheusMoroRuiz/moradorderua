@@ -1,6 +1,9 @@
 <template>
   <q-page padding>
-    <q-btn flat round dense icon="arrow_back" to="/" class="text-h5" label="Efetuar doação"/>
+    <div class="row items-center">
+      <q-btn flat round dense icon="arrow_back" to="/" />
+      <p class="text-h5 q-ma-none">Efetuar Doação</p>
+    </div>
   </q-page>
 </template>
 
