@@ -25,7 +25,8 @@ const routes = [
       { path: '/doacao', component: () => import('src/pages/Doacao.vue')},
       { path: '/ajuda', component: () => import('src/pages/Ajuda.vue')},
       { path: '/configuracoes', component: () => import('src/pages/Configuracoes.vue')},
-      { path: '/politicaprivacidade', component: () => import('src/pages/PoliticaPrivacidade.vue')}
+      { path: '/politicaprivacidade', component: () => import('src/pages/PoliticaPrivacidade.vue')},
+      { path: '/editarperfil', component: () => import('src/pages/EditarPerfil.vue')}
     ]
   },
 

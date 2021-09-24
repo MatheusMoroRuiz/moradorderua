@@ -1,54 +1,56 @@
 <template>
   <q-layout view="lHh lpR lFf">
     <q-header class="bg-grey-7">
-    <q-toolbar class="text-black">
-      <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
-    </q-toolbar>
+      <q-toolbar class="text-black">
+        <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
+      </q-toolbar>
     </q-header>
     <q-drawer
-        v-model="drawer"
-        show-if-above
-        :width="200"
-        :breakpoint="400"
-        overlay behavior="mobile"
+      v-model="drawer"
+      show-if-above
+      :width="200"
+      :breakpoint="400"
+      overlay
+      behavior="mobile"
+    >
+      <q-scroll-area
+        style="
+          height: calc(100% - 150px);
+          margin-top: 150px;
+          border-right: 1px solid #ddd;
+        "
       >
-        <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
-          <q-list padding>
-            <q-item clickable v-ripple to="/doacao">
-              <q-item-section avatar>
-                <q-icon name="volunteer_activism" />
-              </q-item-section>
+        <q-list padding>
+          <q-item clickable v-ripple to="/doacao">
+            <q-item-section avatar>
+              <q-icon name="volunteer_activism" />
+            </q-item-section>
 
-              <q-item-section>
-                Efetuar Doação
-              </q-item-section>
-            </q-item>
+            <q-item-section> Como posso ajudar? </q-item-section>
+          </q-item>
 
-            <q-item clickable v-ripple to="/ajuda">
-              <q-item-section avatar>
-                <q-icon name="help" />
-              </q-item-section>
+          <q-item clickable v-ripple to="/ajuda">
+            <q-item-section avatar>
+              <q-icon name="help" />
+            </q-item-section>
 
-              <q-item-section>
-                Ajuda
-              </q-item-section>
-            </q-item>
+            <q-item-section> Ajuda </q-item-section>
+          </q-item>
 
-            <q-item clickable v-ripple to="politicaprivacidade">
-              <q-item-section avatar>
-                <q-icon name="menu_book" />
-              </q-item-section>
+          <q-item clickable v-ripple to="politicaprivacidade">
+            <q-item-section avatar>
+              <q-icon name="menu_book" />
+            </q-item-section>
 
-              <q-item-section>
-                Politica de Privacidade
-              </q-item-section>
-            </q-item>
+            <q-item-section> Politica de Privacidade </q-item-section>
+          </q-item>
 
-            <q-item clickable v-ripple to="/configuracoes">
-              <q-item-section avatar>
-                <q-icon name="settings" />
-              </q-item-section>
+          <q-item clickable v-ripple to="/configuracoes">
+            <q-item-section avatar>
+              <q-icon name="settings" />
+            </q-item-section>
 
+<<<<<<< HEAD
               <q-item-section>
                 Configurações
               </q-item-section>
@@ -66,17 +68,29 @@
             </q-item>
           </q-list>
         </q-scroll-area>
+=======
+            <q-item-section> Configurações </q-item-section>
+          </q-item>
+        </q-list>
+      </q-scroll-area>
+>>>>>>> 8af57a378846d4dacf217ec1538fb99f2ee7951b
 
-        <q-img class="absolute-top" src="https://cdn.quasar.dev/img/material.png" style="height: 150px">
-          <div class="absolute-bottom bg-transparent">
+      <q-img
+        class="absolute-top"
+        src="https://cdn.quasar.dev/img/material.png"
+        style="height: 150px"
+      >
+        <div class="absolute-bottom bg-transparent">
+          <q-btn flat to="/editarperfil">
             <q-avatar size="56px" class="q-mb-sm">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
             </q-avatar>
-            <div class="text-weight-bold">Razvan Stoenescu</div>
-            <div>@rstoenescu</div>
-          </div>
-        </q-img>
-      </q-drawer>
+          </q-btn>
+          <div class="text-weight-bold">Razvan Stoenescu</div>
+          <div>@rstoenescu</div>
+        </div>
+      </q-img>
+    </q-drawer>
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -92,13 +106,13 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 export default {
-  setup () {
+  setup() {
     return {
-      drawer: ref(false)
-    }
-  }
-}
+      drawer: ref(false),
+    };
+  },
+};
 </script>
