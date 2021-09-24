@@ -53,6 +53,17 @@
                 Configurações
               </q-item-section>
             </q-item>
+
+            <q-item clickable v-ripple to="">
+              <q-item-section avatar>
+                
+              </q-item-section>
+
+              <q-item-section>
+                Sair
+              </q-item-section>
+            
+            </q-item>
           </q-list>
         </q-scroll-area>
 

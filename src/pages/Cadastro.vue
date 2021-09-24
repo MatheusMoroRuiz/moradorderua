@@ -11,6 +11,7 @@
         <m-input v-model="form.cpf" label="CPF/CNPJ" />
         <m-input v-model="form.telefone" label="Telefone" />
         <m-input v-model="form.senha" label="Senha" type="password"/>
+        <m-input v-model="form.confirmarsenha" label="Confirmar senha" type="password"/>
         <div>
           <m-btn label="CADASTRE-SE" />
         </div>
@@ -25,7 +26,6 @@ import MBtn from 'components/MBtn';
 export default {
   components: { MInput, MBtn },
   // name: 'PageName',
-
    data(){
     return {
       form: {
@@ -33,7 +33,8 @@ export default {
         email: "",
         cpf: "",
         telefone: "",
-        senha: ""
+        senha: "",
+        confirmarsenha: ""
       }
     }
   }
