@@ -1,8 +1,8 @@
 <template>
-  <q-page>
-    <div class="q-pa-md row items-center">
-      <q-btn flat round dense icon="arrow_back" to="/" />
-      <p class="text-h5 q-ma-none">Efetuar Doação</p>
+  <q-page padding>
+    <div class="row items-center">
+      <q-btn flat round color="white" dense icon="arrow_back" to="/" />
+      <p class="text-h5 text-white q-ma-none">Efetuar Doação</p>
     </div>
     <div class="column items-stretch">
     <div style="padding-bottom:50px" class="row">
