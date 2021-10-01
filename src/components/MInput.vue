@@ -1,5 +1,5 @@
 <template>
-  <q-input  outlined class="shadow-5" bg-color="white" color="grey-8" label-color="grey-8" v-bind="$attrs"/>
+  <q-input  outlined dark class="shadow-5" color="cyan-5" label-color="white" v-bind="$attrs"/>
 </template>
 
 <script>

@@ -4,8 +4,8 @@
       <div class="text-center">
         <span class="text-weight-bold text-dark text-h5">Faça seu login!</span>
       </div>
-      <m-input placeholder="Insira seu e-mail" v-model="form.email" label="E-mail" />
-      <m-input placeholder="Insira sua senha" v-model="form.senha" label="Senha" type="password" />
+      <q-input outlined bg-color="white" label-color="black" placeholder="Insira seu e-mail" v-model="form.email" label="E-mail" />
+      <q-input outlined bg-color="white" label-color="black" placeholder="Insira sua senha" v-model="form.senha" label="Senha" type="password" />
       <div>
         <m-btn label="Entrar" @click="logar()" />
       </div>
@@ -25,7 +25,7 @@
 import MInput from "components/MInput";
 import MBtn from "components/MBtn";
 export default {
-  components: { MInput, MBtn },
+  components:  { MBtn },
   // name: 'PageName',
 
  data(){

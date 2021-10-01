@@ -1,8 +1,8 @@
 <template>
   <q-page padding>
-    <q-btn flat round dense icon="arrow_back" to="/login" />
+    <q-btn flat color="white" round dense icon="arrow_back" to="/login" />
     <div class="text-center">
-      <h4>Ajude os moradores de rua da sua cidade!</h4>
+      <h4 class="text-white">Ajude os moradores de rua da sua cidade!</h4>
     </div>
     <div class="row justify-center">
       <q-form class="q-gutter-md col-10">
