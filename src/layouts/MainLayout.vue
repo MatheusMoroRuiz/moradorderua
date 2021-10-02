@@ -50,7 +50,7 @@
               <q-icon name="settings" />
             </q-item-section>
 
-<<<<<<< HEAD
+
               <q-item-section>
                 Configurações
               </q-item-section>
@@ -64,16 +64,13 @@
               <q-item-section>
                 Sair
               </q-item-section>
+
             
             </q-item>
           </q-list>
         </q-scroll-area>
-=======
-            <q-item-section> Configurações </q-item-section>
-          </q-item>
-        </q-list>
-      </q-scroll-area>
->>>>>>> 8af57a378846d4dacf217ec1538fb99f2ee7951b
+        <q-item-section> Configurações </q-item-section>
+
 
       <q-img
         class="absolute-top"
