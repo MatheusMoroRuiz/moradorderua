@@ -52,7 +52,6 @@
 
             <q-item-section> Configurações </q-item-section>
           </q-item>
-          <q-item-section> Configurações </q-item-section>
         </q-list>
       </q-scroll-area>
 
@@ -65,8 +64,6 @@
           <q-item-section> Sair </q-item-section>
         </q-item>
       </q-list>
-      <q-item-section> Configurações </q-item-section>
-      <q-item-section> Sair </q-item-section>
 
       <q-img
         class="absolute-top"

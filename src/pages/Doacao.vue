@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <q-page>
     <q-header class="bg-grey-5">
       <q-toolbar class="text-black">
@@ -19,20 +18,6 @@
         </div>
           <q-btn label="Teste" />
       </div>
-=======
-  <q-page padding>
-    <div class="row items-center">
-      <q-btn flat round color="white" dense icon="arrow_back" to="/" />
-      <p class="text-h5 text-white q-ma-none">Efetuar Doação</p>
-    </div>
-    <div class="column items-stretch">
-    <div style="padding-bottom:50px" class="row">
-      a
-    </div>
-    <div class="q-pa-md bg-white">
-      <div style="margin-top:-50px" class="q-pa-md bg-black text-white text-h5 text-center rounded-borders">Formas de doação</div>
-    </div>
->>>>>>> 7ea836e1ed87b67cbe9affbf7417aa395c8ab330
     </div>
   </q-page>
 </template>
