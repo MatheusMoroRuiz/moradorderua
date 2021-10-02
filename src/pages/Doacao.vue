@@ -1,14 +1,13 @@
 <template>
   <q-page>
-    <q-header class="bg-grey-5">
-      <q-toolbar class="text-black">
+      <q-toolbar class="text-white">
         <q-btn flat round dense icon="arrow_back" to="/" />
         <q-toolbar-title class="text-h5">Efetuar Doação</q-toolbar-title>
       </q-toolbar>
-    </q-header>
-    <div class="column items-stretch justify-evenly" style="min-height: calc(100vh - 50px)">
-      <div class="q-pa-md justify-evenly" style="flex: 0; padding-bottom: 50px; ">
-        <q-btn flat label="Enviar Doação" no-caps/> <q-btn flat label="Extrato" no-caps/>
+    <div class="column items-stretch justify-center" style="min-height: calc(100vh - 50px)">
+      <div class="q-pa-md justify-center text-white" style="flex: 0; padding-bottom: 50px; ">
+        <label>Enviar Doação</label>
+        <label>Extrato</label>
       </div>
       <div class="q-pa-md bg-white" style="flex: 1 0;">
         <div
@@ -20,6 +19,7 @@
       </div>
     </div>
   </q-page>
+
 </template>
 
 <script>

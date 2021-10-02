@@ -54,6 +54,7 @@
           </q-item>
         </q-list>
       </q-scroll-area>
+<<<<<<< HEAD
 
       <q-list>
         <q-item clickable v-ripple to="">
@@ -64,6 +65,23 @@
           <q-item-section> Sair </q-item-section>
         </q-item>
       </q-list>
+<<<<<<< HEAD
+=======
+=======
+
+      <q-list>
+        <q-item clickable v-ripple to="">
+          <q-item-section avatar>
+            <q-icon name="logout" />
+          </q-item-section>
+>>>>>>> 3adc15aa50b3e9cdaaa57d194e280394c1a9cd07
+
+          <q-item-section> Sair </q-item-section>
+        </q-item>
+      </q-list>
+      <q-item-section> Configurações </q-item-section>
+      <q-item-section> Sair </q-item-section>
+>>>>>>> 0afc7c1f698a4335f25a99a840c00c9e27a29005
 
       <q-img
         class="absolute-top"
