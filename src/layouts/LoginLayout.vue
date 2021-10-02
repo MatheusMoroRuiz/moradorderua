@@ -16,6 +16,6 @@ export default {
 <style scoped>
 .fundo {
   background: url(~assets/FotoLogin.png) top center no-repeat;
-  background-size: cover;
+  background-size: cover;  
 }
 </style>

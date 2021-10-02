@@ -1,8 +1,8 @@
 <template>
   <q-page padding>
     <div class="row items-center">
-      <q-btn flat round dense icon="arrow_back" to="/" />
-      <p class="text-h5 q-ma-none">Editar Perfil</p>
+      <q-btn flat color="white" round dense icon="arrow_back" to="/" />
+      <p class="text-h5 q-ma-none text-white">Editar Perfil</p>
     </div>
 
     <div class="column items-center">
@@ -11,11 +11,11 @@
           <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
         </q-avatar>
       </q-btn>
-      <p class="text-h5">Alterar Foto</p>
+      <p class="text-h5 text-white">Alterar Foto</p>
     </div>
     <q-form class="q-gutter-lg col-10">
       <div class="column">
-        <label class="text-h6">Nome</label>
+        <label class="text-h6 text-white">Nome</label>
       <q-input
         outlined
         bg-color="white"
@@ -25,7 +25,7 @@
       />
       </div>
       <div class="column">
-        <label class="text-h6">Telefone</label>
+        <label class="text-h6 text-white">Telefone</label>
       <q-input
         outlined
         bg-color="white"
@@ -35,7 +35,7 @@
       />
       </div>
       <div class="column">
-        <label class="text-h6">E-mail</label>
+        <label class="text-h6 text-white">E-mail</label>
       <q-input
         outlined
         bg-color="white"

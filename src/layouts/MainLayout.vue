@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh lpR lFf">
-    <q-header class="bg-grey-7">
+    <q-header class="bg-grey-8">
       <q-toolbar class="text-black">
         <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
       </q-toolbar>
@@ -15,7 +15,7 @@
     >
       <q-scroll-area
         style="
-          height: calc(100% - 150px);
+          height: calc(100% - 200px);
           margin-top: 150px;
           border-right: 1px solid #ddd;
         "
@@ -50,17 +50,28 @@
               <q-icon name="settings" />
             </q-item-section>
 
+<<<<<<< HEAD
 
               <q-item-section>
                 Configurações
               </q-item-section>
             </q-item>
+=======
+            <q-item-section> Configurações </q-item-section>
+          </q-item>
+        </q-list>
+        
+       
+      </q-scroll-area>
+>>>>>>> 7ea836e1ed87b67cbe9affbf7417aa395c8ab330
 
+                <q-list>
             <q-item clickable v-ripple to="">
               <q-item-section avatar>
-                
+                <q-icon name="logout" />
               </q-item-section>
 
+<<<<<<< HEAD
               <q-item-section>
                 Sair
               </q-item-section>
@@ -70,6 +81,11 @@
           </q-list>
         </q-scroll-area>
         <q-item-section> Configurações </q-item-section>
+=======
+              <q-item-section> Sair </q-item-section>
+            </q-item>
+          </q-list>
+>>>>>>> 7ea836e1ed87b67cbe9affbf7417aa395c8ab330
 
 
       <q-img
