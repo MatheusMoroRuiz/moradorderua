@@ -50,43 +50,23 @@
               <q-icon name="settings" />
             </q-item-section>
 
-<<<<<<< HEAD
-
-              <q-item-section>
-                Configurações
-              </q-item-section>
-            </q-item>
-=======
             <q-item-section> Configurações </q-item-section>
           </q-item>
+          <q-item-section> Configurações </q-item-section>
         </q-list>
-        
-       
       </q-scroll-area>
->>>>>>> 7ea836e1ed87b67cbe9affbf7417aa395c8ab330
 
-                <q-list>
-            <q-item clickable v-ripple to="">
-              <q-item-section avatar>
-                <q-icon name="logout" />
-              </q-item-section>
+      <q-list>
+        <q-item clickable v-ripple to="">
+          <q-item-section avatar>
+            <q-icon name="logout" />
+          </q-item-section>
 
-<<<<<<< HEAD
-              <q-item-section>
-                Sair
-              </q-item-section>
-
-            
-            </q-item>
-          </q-list>
-        </q-scroll-area>
-        <q-item-section> Configurações </q-item-section>
-=======
-              <q-item-section> Sair </q-item-section>
-            </q-item>
-          </q-list>
->>>>>>> 7ea836e1ed87b67cbe9affbf7417aa395c8ab330
-
+          <q-item-section> Sair </q-item-section>
+        </q-item>
+      </q-list>
+      <q-item-section> Configurações </q-item-section>
+      <q-item-section> Sair </q-item-section>
 
       <q-img
         class="absolute-top"

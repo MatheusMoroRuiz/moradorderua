@@ -1,4 +1,3 @@
-/*
-export function someMutation (state) {
-}
-*/
+export function setOngs(state, ongs) {
+    state.ongs = ongs;
+  }
