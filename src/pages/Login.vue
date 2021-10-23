@@ -1,11 +1,34 @@
 <template>
   <q-page padding class="flex justify-center content-center">
-    <q-form class="q-gutter-y-md form-login shadow-24 shadow-up-24  q-pa-md rounded-borders">
+    <q-form
+      class="
+        q-gutter-y-md
+        form-login
+        shadow-24 shadow-up-24
+        q-pa-md
+        rounded-borders
+      "
+    >
       <div class="text-center">
         <span class="text-weight-bold text-dark text-h5">Faça seu login!</span>
       </div>
-      <q-input outlined bg-color="white" label-color="black" placeholder="Insira seu e-mail" v-model="form.email" label="E-mail" />
-      <q-input outlined bg-color="white" label-color="black" placeholder="Insira sua senha" v-model="form.senha" label="Senha" type="password" />
+      <q-input
+        outlined
+        bg-color="white"
+        label-color="black"
+        placeholder="Insira seu e-mail"
+        v-model="form.email"
+        label="E-mail"
+      />
+      <q-input
+        outlined
+        bg-color="white"
+        label-color="black"
+        placeholder="Insira sua senha"
+        v-model="form.password"
+        label="Senha"
+        type="password"
+      />
       <div>
         <m-btn label="Entrar" @click="logar()" />
       </div>
@@ -20,22 +43,33 @@
   </q-page>
 </template>
 
-
 <script>
 import MInput from "components/MInput";
 import MBtn from "components/MBtn";
 export default {
-  components:  { MBtn },
+  components: { MBtn },
   // name: 'PageName',
 
- data(){
+  data() {
     return {
       form: {
         email: "",
-        senha: ""
-      }
-    }
-  }
+        password: "",
+      },
+    };
+  },
+  methods: {
+    logar() {
+      this.$store
+        .dispatch("usuarios/logar", this.form)
+        .then((r) => {
+          this.$router.push("/");
+        })
+        .catch((erro) => {
+          alert(erro);
+        });
+    },
+  },
 };
 </script>
 <style scoped>

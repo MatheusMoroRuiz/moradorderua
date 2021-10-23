@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh lpR lFf">
-    <q-header class="bg-grey-8">
+    <q-header class="bg-blue-grey-6">
       <q-toolbar class="text-black">
         <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
       </q-toolbar>
@@ -83,7 +83,7 @@
     <q-page-container>
       <router-view />
     </q-page-container>
-    <q-footer elevated class="bg-grey-8 text-black">
+    <q-footer elevated class="bg-blue-grey-6 text-black">
       <q-tabs>
         <q-route-tab icon="home" label="Início" to="/" />
         <q-route-tab icon="assignment" label="Relatar" to="/relatar" />

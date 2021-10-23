@@ -18,9 +18,9 @@
           dark 
           v-model="sexo"
           :options="options"
-          color="cyan-5" 
+          color="cyan-6" 
           label="Sexo do morador"
-          label-color="white"
+          label-color="grey-8"
         />
 
         <q-input
@@ -28,19 +28,19 @@
           outlined
           label="Condição física do morador"
           type="textarea"
-          color="cyan-5" 
+          color="cyan-6" 
           dark 
-          label-color="white"
+          label-color="grey-8"
           placeholder="Exemplo: está com fome, está doente, está com frio, etc."
         />
         <q-input
           v-model="caracteristica"
           outlined
-          color="cyan-5" 
+          color="cyan-6" 
           dark
           label="Características do morador"
           type="textarea"
-          label-color="white"
+          label-color="grey-8"
           placeholder="Exemplo: cor do cabelo, cor da pele, alto ou baixo, tamanho do cabelo, estilo de roupa, etc."
         />
         <div>
