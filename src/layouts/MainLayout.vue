@@ -64,7 +64,6 @@
           <q-item-section> Sair </q-item-section>
         </q-item>
       </q-list>
-
       <q-img
         class="absolute-top"
         src="https://cdn.quasar.dev/img/material.png"
@@ -76,8 +75,8 @@
               <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
             </q-avatar>
           </q-btn>
-          <div class="text-weight-bold">Razvan Stoenescu</div>
-          <div>@rstoenescu</div>
+          <div class="text-weight-bold">Cleitinho da Silva</div>
+          <div>@cleitinhodasilva</div>
         </div>
       </q-img>
     </q-drawer>
