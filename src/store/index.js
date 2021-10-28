@@ -1,6 +1,7 @@
 import { store } from 'quasar/wrappers'
 import { createStore } from 'vuex'
 import ongs from './ongs'
+import relatos from './relatos'
 
 /*
  * If not building with SSR mode, you can
@@ -14,7 +15,8 @@ import ongs from './ongs'
 export default store(function (/* { ssrContext } */) {
   const Store = createStore({
     modules: {
-      ongs
+      ongs,
+      relatos
     },
 
     // enable strict mode (adds overhead!)
