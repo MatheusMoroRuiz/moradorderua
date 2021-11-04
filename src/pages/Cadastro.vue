@@ -35,8 +35,23 @@ export default {
         telefone: "",
         senha: "",
         confirmarsenha: ""
+      },
+    };
+  },
+    methods:{
+      cadastrar() {
+      if (this.isEditar){
+        var dados = {
+          id: this.$route.params.id,
+          ...this.form
+        }
+      };
       }
-    }
+      },
+    computed:{
+      isEditar(){
+        return this.$route.params
+      }
+    },
   }
-};
 </script>
