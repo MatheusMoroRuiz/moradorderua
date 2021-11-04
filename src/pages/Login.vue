@@ -39,6 +39,9 @@
           >CADASTRE-SE</router-link
         >
       </div>
+      <div class="text-center">
+        <q-spinner-ios color="black" size="4em" />
+      </div>
     </q-form>
   </q-page>
 </template>
@@ -58,18 +61,22 @@ export default {
       },
     };
   },
-    methods: {
+  methods: {
     logar() {
       this.$store
         .dispatch("usuarios/logar", this.form)
-        .then(r => {
+        .then((r) => {
           this.$router.push("/");
+          this.$q.notify({
+            message: "Logado com sucesso!",
+            color: "positive",
+          });
         })
-        .catch(erro => {
+        .catch((erro) => {
           alert(erro);
         });
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>
