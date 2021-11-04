@@ -25,7 +25,7 @@
         bg-color="white"
         label-color="black"
         placeholder="Insira sua senha"
-        v-model="form.password"
+        v-model="form.senha"
         label="Senha"
         type="password"
       />
@@ -54,22 +54,22 @@ export default {
     return {
       form: {
         email: "",
-        password: "",
+        senha: "",
       },
     };
   },
-  methods: {
+    methods: {
     logar() {
       this.$store
         .dispatch("usuarios/logar", this.form)
-        .then((r) => {
+        .then(r => {
           this.$router.push("/");
         })
-        .catch((erro) => {
+        .catch(erro => {
           alert(erro);
         });
-    },
-  },
+    }
+  }
 };
 </script>
 <style scoped>

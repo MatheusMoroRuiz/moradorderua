@@ -65,6 +65,7 @@
         </q-item>
       </q-list>
       <q-img
+        v-if="usuario != null"
         class="absolute-top"
         src="https://cdn.quasar.dev/img/material.png"
         style="height: 150px"
@@ -75,8 +76,8 @@
               <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
             </q-avatar>
           </q-btn>
-          <div class="text-weight-bold">Cleitinho da Silva</div>
-          <div>@cleitinhodasilva</div>
+          <div class="text-weight-bold">{{ usuario.nome }}</div>
+          <div>{{ usuario.email }}</div>
         </div>
       </q-img>
     </q-drawer>
@@ -95,13 +96,25 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import { useStore } from "vuex";
 
 export default {
   setup() {
+    const store = useStore();
+    const usuario = computed(() => store.state.usuarios.usuario);
+
     return {
       drawer: ref(false),
+      usuario,
     };
+  },
+  async mounted() {
+    try {
+      await this.$store.dispatch("usuarios/carregarToken");
+    } catch (e) {
+      this.$router.replace("/login");
+    }
   },
 };
 </script>
