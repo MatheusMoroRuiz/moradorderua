@@ -8,7 +8,7 @@
       <q-form class="q-gutter-md col-10">
         <m-input v-model="form.nome" label="Nome" />
         <m-input v-model="form.email" label="E-mail" />
-        <m-input v-model="form.documento" label="CPF/CNPJ" />
+        <m-input v-model="form.documento" label="CPF" />
         <m-input v-model="form.telefone" label="Telefone" />
         <m-input v-model="form.senha" label="Senha" type="password" />
         <m-input
