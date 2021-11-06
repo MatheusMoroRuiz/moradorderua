@@ -47,11 +47,12 @@ export default {
       var dados = {
         ...this.form,
       };
+      if (this.form.senha == this.form.confirmarsenha){
       this.$store
         .dispatch("usuarios/inserir", dados)
         .then((resp) => {
           this.$q.notify({
-            message: "Inserido com sucesso!",
+            message: "Cadastro efetuado com sucesso!",
             color: "positive",
           });
           this.$router.push("/");
@@ -67,6 +68,13 @@ export default {
             }
           }
         });
+      }
+      else {
+        this.$q.notify({
+          message: "As senhas não são indenticas",
+          color: "negative",
+        });
+      }
     },
   },
 };
