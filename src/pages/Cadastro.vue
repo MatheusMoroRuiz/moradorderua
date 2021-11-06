@@ -8,12 +8,12 @@
       <q-form class="q-gutter-md col-10">
         <m-input v-model="form.nome" label="Nome" />
         <m-input v-model="form.email" label="E-mail" />
-        <m-input v-model="form.cpf" label="CPF/CNPJ" />
+        <m-input v-model="form.documento" label="CPF/CNPJ" />
         <m-input v-model="form.telefone" label="Telefone" />
         <m-input v-model="form.senha" label="Senha" type="password"/>
         <m-input v-model="form.confirmarsenha" label="Confirmar senha" type="password"/>
         <div>
-          <m-btn label="CADASTRE-SE" />
+          <m-btn label="CADASTRE-SE" @click="enviarForm()"/>
         </div>
       </q-form>
     </div>
@@ -31,11 +31,38 @@ export default {
       form: {
         nome: "",
         email: "",
-        cpf: "",
+        documento: "",
         telefone: "",
         senha: "",
         confirmarsenha: ""
       }
+    }
+  },
+  methods: {
+    enviarForm() {
+        var dados = {
+          ...this.form
+        };
+       this.$store
+          .dispatch("usuarios/inserir", dados)
+          .then(resp => {
+            this.$q.notify({
+              message: "Inserido com sucesso!",
+              color: "positive"
+            });
+            this.$router.push('/');
+          })
+          .catch(erro => {
+            var mensagens = erro.response.data;
+            for (var campo in mensagens) {
+              for (var msg in mensagens[campo]) {
+                this.$q.notify({
+                  message: `Erro ${campo}: ${mensagens[campo][msg]}`,
+                  color: "negative"
+                });
+              }
+            }
+          });
     }
   }
 };

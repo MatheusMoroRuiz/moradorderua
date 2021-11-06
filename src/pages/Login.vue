@@ -39,9 +39,6 @@
           >CADASTRE-SE</router-link
         >
       </div>
-      <div class="text-center">
-        <q-spinner-ios color="black" size="4em" />
-      </div>
     </q-form>
   </q-page>
 </template>
@@ -73,7 +70,10 @@ export default {
           });
         })
         .catch((erro) => {
-          alert(erro);
+          this.$q.notify({
+            message: "O e-mail ou a senha está incorreto!",
+            color: "negative",
+          });;
         });
     },
   },

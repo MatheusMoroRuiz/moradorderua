@@ -19,6 +19,15 @@ export function logar({ commit, dispatch }, { email, senha }) {
   });
 }
 
+
+export function inserir({commit, dispatch}, form) {
+  return api.post('/usuarios/', form).then(r => {
+      commit('setUsuario', r.data);
+      return dispatch('listar');
+  })
+
+}
+
 export function me({ commit }) {
   return api.get("/usuarios/me").then(r => {
     commit("setUsuario", r.data);

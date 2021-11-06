@@ -41,7 +41,7 @@
         bg-color="white"
         color="grey-8"
         label-color="grey-8"
-        placeholder="Atual e-mail do usuário"
+        placeholder="Atual e-mail do usuário" 
       />
       </div>
       <div>
@@ -53,6 +53,11 @@
 
 <script>
 export default {
-  // name: 'PageName',
+  computed: {
+    usuario () {
+      return this.$store.state.usuarios.usuario;
+    }
+  }
+ 
 };
 </script>
