@@ -21,14 +21,6 @@
         "
       >
         <q-list padding>
-          <q-item clickable v-ripple to="/doacao">
-            <q-item-section avatar>
-              <q-icon name="volunteer_activism" />
-            </q-item-section>
-
-            <q-item-section> Como posso ajudar? </q-item-section>
-          </q-item>
-
           <q-item clickable v-ripple to="/ajuda">
             <q-item-section avatar>
               <q-icon name="help" />

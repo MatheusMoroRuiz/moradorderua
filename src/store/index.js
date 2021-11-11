@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 import ongs from './ongs'
 import relatos from './relatos'
 import usuarios from './usuarios'
+import endereco from './endereco'
 
 /*
  * If not building with SSR mode, you can
@@ -18,7 +19,8 @@ export default store(function (/* { ssrContext } */) {
     modules: {
       ongs,
       relatos,
-      usuarios
+      usuarios,
+      endereco
     },
 
     // enable strict mode (adds overhead!)
