@@ -70,6 +70,7 @@ export default {
           });
         })
         .catch((erro) => {
+          console.log(erro)
           this.$q.notify({
             message: "O e-mail ou a senha está incorreto!",
             color: "negative",

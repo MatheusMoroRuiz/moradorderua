@@ -48,7 +48,7 @@
       </q-scroll-area>
 
       <q-list>
-        <q-item clickable v-ripple to="">
+        <q-item clickable v-ripple @click="sair()">
           <q-item-section avatar>
             <q-icon name="logout" />
           </q-item-section>
@@ -108,5 +108,11 @@ export default {
       this.$router.replace("/login");
     }
   },
+  methods: {
+    sair () {
+      this.$store.dispatch("usuarios/sair");
+      this.$router.push("/login");
+    }
+  }
 };
 </script>

@@ -1,10 +1,11 @@
 <template>
-  <q-page padding>
+  <q-page padding >
     <div class="row justify-center">
-      <span class="text-white"> Preencha com as informações necessárias </span>
-      <q-btn label="Localização" @click="consultarLocalizacao" />
-      {{ this.lat }} {{ this.lng }}
+      <span class="text-white"> Clique no botão abaixo para ativar sua localização! </span>
       <q-form class="q-gutter-md col-10">
+        <div>
+        <q-btn color="white" class="text-black full-width" label="Localização" @click="consultarLocalizacao" />
+        </div>
         <q-input
           outlined
           color="cyan-6"

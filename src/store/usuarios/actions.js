@@ -3,6 +3,7 @@ export function someAction (context) {
 }
 */
 
+
 import { api } from "boot/axios";
 const storage = window.localStorage;
 
@@ -22,8 +23,10 @@ export function logar({ commit, dispatch }, { email, senha }) {
 
 export function inserir({commit, dispatch}, form) {
   return api.post('/usuarios/', form).then(r => {
-      commit('setUsuario', r.data);
-      return dispatch('listar');
+      commit('setUsuario', r.data.usuario);
+      commit("setToken", r.data.token);
+      storage.setItem("token", r.data.token);
+      return dispatch('me');
   })
 
 }
@@ -44,6 +47,13 @@ export function carregarToken({ commit, dispatch }) {
     commit("setToken", null);
     throw error;
   });
+}
+
+export function alterar({commit,dispatch}, form) {
+  return api.put(`/usuarios/${form.id}/`, form).then(r => {
+      commit('setUsuario', r.data);
+      return dispatch('me');
+  })
 }
 
 export function sair({ commit }) {
