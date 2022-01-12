@@ -1,11 +1,13 @@
 <template>
   <q-page padding >
     <div class="row justify-center">
-      <span class="text-white"> Clique no botão abaixo para ativar sua localização! </span>
+      <span class="text-white"> Clique no botão abaixo para ativar sua localização </span>
       <q-form class="q-gutter-md col-10">
         <div>
         <q-btn color="white" class="text-black full-width" label="Localização" @click="consultarLocalizacao" />
+        
         </div>
+
         <q-input
           outlined
           color="cyan-6"
@@ -94,29 +96,49 @@
 export default {
   data() {
     return {
-      lat: 0,
-      lng: 0,
+     dados: {
+     lat: "",
+     lng: "",
+    },
       form: {
         sexo: "",
         condicaoFisica: "",
         caracteristicas: "",
       },
       endereco: {
-        logradouro: "",
+        logradouro: "",      
         bairro: "",
         cidade: "",
         estado: "",
       },
       options: ["Masculino", "Feminino"],
+      
+      
     };
   },
   methods: {
     consultarLocalizacao() {
       navigator.geolocation.getCurrentPosition((position) => {
-          this.lat = position.coords.latitude
-          this.lng = position.coords.longitude
+        this.dados.lat = position.coords.latitude,                 
+        this.dados.lng = position.coords.longitude
+
+        console.log(this.dados)
+
+        this.buscar()       
+                    
+      });         
+    },
+
+    buscar() {             
+      this.$store.dispatch("maps/getAddress", this.dados).then(r => {
+        console.log(r)
+        this.endereco.logradouro = r.data.results[0].address_components[1].long_name +", " + r.data.results[0].address_components[0].long_name;
+        this.endereco.bairro = r.data.results[0].address_components[2].long_name
+        this.endereco.cidade = r.data.results[0].address_components[3].long_name
+        this.endereco.estado = r.data.results[0].address_components[4].long_name      
       });
     },
+
     enviarForm() {
       var dados = {
         ...this.form,
@@ -159,8 +181,12 @@ export default {
               color: "negative",
             });
           }
-        });
-    },
+        });      
+    },  
+
   },
+
 };
+
 </script>
+

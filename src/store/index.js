@@ -4,6 +4,7 @@ import ongs from './ongs'
 import relatos from './relatos'
 import usuarios from './usuarios'
 import endereco from './endereco'
+import maps from './maps'
 
 /*
  * If not building with SSR mode, you can
@@ -20,7 +21,8 @@ export default store(function (/* { ssrContext } */) {
       ongs,
       relatos,
       usuarios,
-      endereco
+      endereco,
+      maps
     },
 
     // enable strict mode (adds overhead!)
