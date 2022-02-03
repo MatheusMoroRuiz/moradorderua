@@ -95,21 +95,20 @@
 <script>
 export default {
   data() {
-    return {
-     dados: {
-     lat: "",
-     lng: "",
-    },
+    return {   
       form: {
         sexo: "",
         condicaoFisica: "",
         caracteristicas: "",
+
       },
       endereco: {
         logradouro: "",      
         bairro: "",
         cidade: "",
         estado: "",
+        lat: "",
+        lng: "",
       },
       options: ["Masculino", "Feminino"],
       
@@ -119,10 +118,10 @@ export default {
   methods: {
     consultarLocalizacao() {
       navigator.geolocation.getCurrentPosition((position) => {
-        this.dados.lat = position.coords.latitude,                 
-        this.dados.lng = position.coords.longitude
+        this.endereco.lat = position.coords.latitude,                 
+        this.endereco.lng = position.coords.longitude
 
-        console.log(this.dados)
+        console.log(this.endereco)
 
         this.buscar()       
                     
@@ -130,7 +129,7 @@ export default {
     },
 
     buscar() {             
-      this.$store.dispatch("maps/getAddress", this.dados).then(r => {
+      this.$store.dispatch("maps/getAddress", this.endereco).then(r => {
         console.log(r)
         this.endereco.logradouro = r.data.results[0].address_components[1].long_name +", " + r.data.results[0].address_components[0].long_name;
         this.endereco.bairro = r.data.results[0].address_components[2].long_name
