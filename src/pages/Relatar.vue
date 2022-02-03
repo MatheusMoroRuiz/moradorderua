@@ -107,8 +107,8 @@ export default {
         bairro: "",
         cidade: "",
         estado: "",
-        lat: "",
-        lng: "",
+        lat: [],
+        lng: [],
       },
       options: ["Masculino", "Feminino"],
       
