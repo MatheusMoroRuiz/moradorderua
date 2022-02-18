@@ -80,7 +80,6 @@
       <q-tabs>
         <q-route-tab icon="home" label="Início" to="/" />
         <q-route-tab icon="assignment" label="Relatar" to="/relatar" />
-        <q-route-tab icon="location_on" label="Localização" to="/localizacao" />
         <q-route-tab icon="format_list_bulleted" label="ONG's" to="/ongs" />
       </q-tabs>
     </q-footer>
