@@ -44,6 +44,15 @@
 
             <q-item-section> Configurações </q-item-section>
           </q-item>
+
+          <q-item clickable v-ripple to="/addongs">
+            <q-item-section avatar>
+              <q-icon name="groups" />
+            </q-item-section>
+
+            <q-item-section> Cadastro de ONG's </q-item-section>
+          </q-item> 
+
         </q-list>
       </q-scroll-area>
 
@@ -80,7 +89,7 @@
       <q-tabs>
         <q-route-tab icon="home" label="Início" to="/" />
         <q-route-tab icon="assignment" label="Relatar" to="/relatar" />
-        <q-route-tab icon="format_list_bulleted" label="ONG's" to="/ongs" />
+        <q-route-tab icon="groups" label="ONG's" to="/ongs" />
       </q-tabs>
     </q-footer>
   </q-layout>

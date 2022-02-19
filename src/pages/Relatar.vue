@@ -1,11 +1,17 @@
 <template>
-  <q-page padding >
+  <q-page padding>
     <div class="row justify-center">
-      <span class="text-white"> Clique no botão abaixo para ativar sua localização </span>
+      <span class="text-white">
+        Clique no botão abaixo para ativar sua localização
+      </span>
       <q-form class="q-gutter-md col-10">
         <div>
-        <q-btn color="white" class="text-black full-width" label="Localização" @click="consultarLocalizacao" />
-        
+          <q-btn
+            color="white"
+            class="text-black full-width"
+            label="Localização"
+            @click="consultarLocalizacao"
+          />
         </div>
 
         <q-input
@@ -95,15 +101,14 @@
 <script>
 export default {
   data() {
-    return {   
+    return {
       form: {
         sexo: "",
         condicaoFisica: "",
         caracteristicas: "",
-
       },
       endereco: {
-        logradouro: "",      
+        logradouro: "",
         bairro: "",
         cidade: "",
         estado: "",
@@ -111,30 +116,33 @@ export default {
         lng: [],
       },
       options: ["Masculino", "Feminino"],
-      
-      
     };
   },
   methods: {
     consultarLocalizacao() {
       navigator.geolocation.getCurrentPosition((position) => {
-        this.endereco.lat = position.coords.latitude,                 
-        this.endereco.lng = position.coords.longitude
+        (this.endereco.lat = position.coords.latitude),
+          (this.endereco.lng = position.coords.longitude);
 
-        console.log(this.endereco)
+        console.log(this.endereco);
 
-        this.buscar()       
-                    
-      });         
+        this.buscar();
+      });
     },
 
-    buscar() {             
-      this.$store.dispatch("maps/getAddress", this.endereco).then(r => {
-        console.log(r)
-        this.endereco.logradouro = r.data.results[0].address_components[1].long_name +", " + r.data.results[0].address_components[0].long_name;
-        this.endereco.bairro = r.data.results[0].address_components[2].long_name
-        this.endereco.cidade = r.data.results[0].address_components[3].long_name
-        this.endereco.estado = r.data.results[0].address_components[4].long_name      
+    buscar() {
+      this.$store.dispatch("maps/getAddress", this.endereco).then((r) => {
+        console.log(r);
+        this.endereco.logradouro =
+          r.data.results[0].address_components[1].long_name +
+          ", " +
+          r.data.results[0].address_components[0].long_name;
+        this.endereco.bairro =
+          r.data.results[0].address_components[2].long_name;
+        this.endereco.cidade =
+          r.data.results[0].address_components[3].long_name;
+        this.endereco.estado =
+          r.data.results[0].address_components[4].long_name;
       });
     },
 
@@ -180,12 +188,8 @@ export default {
               color: "negative",
             });
           }
-        });      
-    },  
-
+        });
+    },
   },
-
 };
-
 </script>
-
