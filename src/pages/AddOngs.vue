@@ -13,6 +13,7 @@
           dark
           label-color="grey-8"
           label="Nome da ONG"
+          v-model="form.nome"
         />
 
         <q-input
@@ -21,6 +22,7 @@
           dark
           label-color="grey-8"
           label="CNPJ"
+          v-model="form.cnpj"
         />
 
         <q-input
@@ -29,24 +31,29 @@
           dark
           label-color="grey-8"
           label="CEP"
+          v-model="form.ceps"
         />
+
         <div class="row">
-          <div class="col-8">
+          <div class="col-8 q-mr-md">
             <q-input
               outlined
-              color="cyan-6"
+              color="cyan-8"
               dark
               label-color="grey-8"
               label="Rua"
+              v-model="form.rua"
             />
           </div>
-          <div class="col">
+
+          <div class="col-3">
             <q-input
               outlined
               color="cyan-6"
               dark
-              label-color="grey-8"
               label="N°"
+              label-color="grey-8"
+              v-model="form.numero"
             />
           </div>
         </div>
@@ -57,36 +64,57 @@
           dark
           label-color="grey-8"
           label="Bairro"
+          v-model="form.bairro"
         />
 
         <div class="row">
-          <div class="col-8">
+          <div class="col-8 q-mr-md">
             <q-input
               outlined
-              color="cyan-6"
+              color="cyan-8"
               dark
               label-color="grey-8"
               label="Cidade"
+              v-model="form.cidade"
             />
           </div>
-          <div class="col">
+
+          <div class="col-3">
             <q-input
               outlined
               color="cyan-6"
               dark
               label="UF"
               label-color="grey-8"
+              v-model="form.uf"
             />
           </div>
         </div>
 
-        <q-input
-          outlined
-          color="cyan-6"
-          dark
-          label-color="grey-8"
-          label="Telefone"
-        />
+        <div class="row">
+          <q-input
+            class="col"
+            outlined
+            color="cyan-6"
+            dark
+            label-color="grey-8"
+            label="Tel"
+            v-model="form.telefone"
+          />
+          <div class="col" />
+        </div>
+        <div class="row">
+          <q-input
+            class="col"
+            outlined
+            color="cyan-6"
+            dark
+            label-color="grey-8"
+            label="Cel"
+            v-model="form.celular"
+          />
+          <div class="col" />
+        </div>
 
         <q-input
           outlined
@@ -94,6 +122,7 @@
           color="cyan-6"
           label="E-mail"
           label-color="grey-8"
+          v-model="form.email"
         />
 
         <q-input
@@ -103,6 +132,7 @@
           color="cyan-6"
           dark
           label-color="grey-8"
+          v-model="form.descricao"
         />
 
         <div>
@@ -121,5 +151,23 @@
 <script>
 export default {
   // name: 'PageName',
+    data() {
+    return {
+      form: {
+        nome: "",
+        cnpj: "",
+        ceps: "",
+        rua: "",
+        numero: "",
+        bairro: "",
+        cidade: "",
+        uf: "",
+        telefone: "",
+        celular: "",
+        email: "",
+        descricao: "",
+      },
+    }
+    }
 };
 </script>
