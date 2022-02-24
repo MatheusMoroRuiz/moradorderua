@@ -91,31 +91,24 @@
           </div>
         </div>
 
-        <div class="row">
-          <q-input
-            class="col"
-            outlined
-            color="cyan-6"
-            dark
-            label-color="grey-8"
-            label="Tel"
-            v-model="form.telefone"
-          />
-          <div class="col" />
-        </div>
-        <div class="row">
-          <q-input
-            class="col"
-            outlined
-            color="cyan-6"
-            dark
-            label-color="grey-8"
-            label="Cel"
-            v-model="form.celular"
-          />
-          <div class="col" />
-        </div>
-
+        <q-input
+          class="col"
+          outlined
+          color="cyan-6"
+          dark
+          label-color="grey-8"
+          label="Tel"
+          v-model="form.telefone"
+        />
+        <q-input
+          class="col"
+          outlined
+          color="cyan-6"
+          dark
+          label-color="grey-8"
+          label="Cel"
+          v-model="form.celular"
+        />
         <q-input
           outlined
           dark
@@ -140,7 +133,8 @@
             size="md"
             class="full-width text-black"
             color="white"
-            label="ENVIAR RELATÓRIO"
+            label="CADASTRAR"
+            @click="enviarCadastro()"
           />
         </div>
       </q-form>
@@ -151,7 +145,7 @@
 <script>
 export default {
   // name: 'PageName',
-    data() {
+  data() {
     return {
       form: {
         nome: "",
@@ -167,7 +161,34 @@ export default {
         email: "",
         descricao: "",
       },
-    }
-    }
+    };
+  },
+  methods: {
+    enviarCadastro() {
+      var dados = {
+        ...this.form,
+      };
+      this.$store
+        .dispatch("ongs/cadastrar", dados)
+        .then((resp) => {
+          this.$q.notify({
+            message:
+              "Cadastro enviado com sucesso! Agora iremos analisar as informações antes de postá-la, por favor aguarde.",
+            color: "positive",
+            position: "center",
+          });
+        })
+        .catch((erro) => {
+          console.log(erro.response);
+          var mensagens = erro.response.data.errors;
+          for (var i in mensagens) {
+            this.$q.notify({
+              message: mensagens[i].message,
+              color: "negative",
+            });
+          }
+        });
+    },
+  },
 };
 </script>
