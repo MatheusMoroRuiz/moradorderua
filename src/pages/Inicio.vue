@@ -1,39 +1,27 @@
 <template>
   <q-page>
-    <div>
-      <iframe
-        width="420"
-        height="215"
-        src="https://www.youtube.com/embed/zZQkRiv7E38"
-        title="Video EXPLICANDO"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-    <div class="q-ml-sm">
-      <label class="text-h6 text-white">Galeria</label>
-    </div>
-    <div class="q-pa-md">
-      <q-carousel height="125px" animated arrows v-model="slide" infinite :autoplay="autoplay">
-        <q-carousel-slide
-          :name="1"
-          img-src="https://cdn.quasar.dev/img/mountains.jpg"
-        />
-        <q-carousel-slide
-          :name="2"
-          img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-        />
-        <q-carousel-slide
-          :name="3"
-          img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-        />
-        <q-carousel-slide
-          :name="4"
-          img-src="https://cdn.quasar.dev/img/quasar.jpg"
-        />
-      </q-carousel>
-    </div>
+    <h5 style="color: white; text-align: center; margin-bottom: 15px; margin-top: 20px">
+      Nossa intenção com o Empathy
+    </h5>
+    <p
+      style="
+        color: white;
+        text-align: center;
+        font-size: 13px;
+        margin: 25px;
+        margin-top: 0
+      "
+    >
+      Cada usuário que tiver o aplicativo instalado em seu aparelho celular,
+      poderá de sua cidade relatar todos os moradores de rua que ele encontrar
+      em uma determinada localização. Terá um local específico no aplicativo de
+      fácil acesso para os usuários concluírem esse relatório. Nós,
+      administradores do aplicativo, automaticamente pegaremos esses relatos e
+      enviaremos para as ONG’s locais de cada município para que elas façam o
+      trabalho de poder ajudar esses moradores de rua. Nós, ao pensarmos na
+      criação desse APP tivemos uma visão mais humanitária e de ajuda social
+      para com os moradores de rua.
+    </p>
   </q-page>
 </template>
 
@@ -42,10 +30,7 @@ import { ref } from "vue";
 export default {
   // name: 'PageName',
   data() {
-    return {
-      slide: ref(1),
-      autoplay: ref(true)
-    };
+    return {};
   },
 };
 </script>
