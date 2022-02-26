@@ -74,7 +74,7 @@
               color="cyan-8"
               dark
               label-color="grey-8"
-              label="Cidade"
+              label="*Cidade"
               v-model="form.cidade"
             />
           </div>
@@ -167,10 +167,16 @@ export default {
     enviarCadastro() {
       var dados = {
         ...this.form,
+        
       };
+      if( !(this.form.nome == "" || this.form.cnpj == "" || this.form.ceps == "" || this.form.rua == "" || this.form.numero == "" ||
+       this.form.bairro == "" || this.form.cidade == "" || this.form.uf == ""  ||
+        this.form.email == "" || this.form.descricao == "" )) {
+      console.log(this.form)
       this.$store
         .dispatch("ongs/cadastrar", dados)
         .then((resp) => {
+          console.log(this.dados)
           this.$q.notify({
             message:
               "Cadastro enviado com sucesso! Agora iremos analisar as informações antes de postá-la, por favor aguarde.",
@@ -187,7 +193,14 @@ export default {
               color: "negative",
             });
           }
+        })
+       }
+      else {
+        this.$q.notify({
+          message: "Preencha todos os dados obrigatórios",
+          color: "negative",
         });
+      }
     },
   },
 };
