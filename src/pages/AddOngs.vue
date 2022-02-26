@@ -14,6 +14,10 @@
           label-color="grey-8"
           label="Nome da ONG"
           v-model="form.nome"
+          lazy-rules
+          :rules="[
+          (val) => (val && val.length > 0) || '']"
+          
         />
 
         <q-input
