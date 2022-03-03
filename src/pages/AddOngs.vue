@@ -14,10 +14,7 @@
           label-color="grey-8"
           label="Nome da ONG"
           v-model="form.nome"
-          lazy-rules
-          :rules="[
-          (val) => (val && val.length > 0) || '']"
-          
+
         />
 
         <q-input
@@ -171,16 +168,13 @@ export default {
     enviarCadastro() {
       var dados = {
         ...this.form,
-        
       };
-      if( !(this.form.nome == "" || this.form.cnpj == "" || this.form.ceps == "" || this.form.rua == "" || this.form.numero == "" ||
-       this.form.bairro == "" || this.form.cidade == "" || this.form.uf == ""  ||
-        this.form.email == "" || this.form.descricao == "" )) {
-      console.log(this.form)
+
       this.$store
         .dispatch("ongs/cadastrar", dados)
         .then((resp) => {
-          console.log(this.dados)
+          console.log(this.dados);
+          this.$router.push("/");
           this.$q.notify({
             message:
               "Cadastro enviado com sucesso! Agora iremos analisar as informações antes de postá-la, por favor aguarde.",
@@ -197,14 +191,12 @@ export default {
               color: "negative",
             });
           }
-        })
-       }
-      else {
-        this.$q.notify({
+        });
+
+      /*    this.$q.notify({
           message: "Preencha todos os dados obrigatórios",
           color: "negative",
-        });
-      }
+        }); */
     },
   },
 };

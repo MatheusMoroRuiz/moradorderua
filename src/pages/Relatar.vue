@@ -149,7 +149,7 @@ export default {
     enviarForm() {
       var dados = {
         ...this.form,
-        ...this.endereco,
+        endereco:{...this.endereco}
       };
       this.$store
         .dispatch("relatos/inserir", dados)
@@ -169,26 +169,7 @@ export default {
               color: "negative",
             });
           }
-        });
-      this.$store
-        .dispatch("endereco/inserir", dados)
-        .then((resp) => {
-          this.$q.notify({
-            message: "Inserido com sucesso!",
-            color: "positive",
-            position: "center",
-          });
-        })
-        .catch((erro) => {
-          console.log(erro.response);
-          var mensagens = erro.response.data.errors;
-          for (var i in mensagens) {
-            this.$q.notify({
-              message: mensagens[i].message,
-              color: "negative",
-            });
-          }
-        });
+        });      
     },
   },
 };
