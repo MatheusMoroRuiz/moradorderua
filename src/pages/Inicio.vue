@@ -31,15 +31,28 @@
         para com os moradores de rua.
       </p>
 
-      <br>
-      <br>
+      <br />
+      <br />
       <section class="estatisticas">
         <q-img
           src="~/assets/space.jpg"
           spinner-color="white"
-          height="120px"
+          height="115px"
           fit="cover"
-        />
+        >
+          <div class="q-ml-sm">
+            <table class="corletra">
+              <tr>
+                <th class="bordas">Número de relatos diários</th>
+                <th class="borda">Número de relatos Totais</th>
+              </tr>
+              <tr>
+                <td class="bordas">{{estatistica.dia}}</td>
+                <td class="borda">{{estatistica.totais}}</td>
+              </tr>
+            </table>
+          </div>
+        </q-img>
       </section>
     </body>
   </q-page>
@@ -50,7 +63,35 @@ import { ref } from "vue";
 export default {
   // name: 'PageName',
   data() {
-    return {};
+    return {
+      estatistica: {
+        dia:"00000",
+        totais: "00000"
+      }
+    };
   },
 };
 </script>
+
+<style>
+/*.fonte {
+  font-size: 18px;
+  font-weight: bold;
+}
+.fonte1 {
+  font-size: 16px;
+}*/
+.borda {
+  border-left: 0px solid #dddddd;
+  text-align: center;
+  padding: 9px;
+}
+.bordas {
+  text-align: center;
+  padding: 9px;
+}
+
+.corletra {
+  color: #f7f7f7;
+}
+</style>
