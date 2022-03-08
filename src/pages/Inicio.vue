@@ -41,14 +41,14 @@
           fit="cover"
         >
           <div class="q-ml-sm">
-            <table class="corletra">
+            <table class="corletra" v-if="stats">
               <tr>
-                <th class="bordas">Número de relatos diários</th>
-                <th class="borda">Número de relatos Totais</th>
+                <th class="borda">Número de Relatos Diários</th>
+                <th class="borda">Número de Relatos Totais</th>
               </tr>
               <tr>
-                <td class="bordas">{{estatistica.dia}}</td>
-                <td class="borda">{{estatistica.totais}}</td>
+                <td class="borda">{{stats.dia}}</td>
+                <td class="borda">{{stats.total}}</td>
               </tr>
             </table>
           </div>
@@ -59,17 +59,21 @@
 </template>
 
 <script>
-import { ref } from "vue";
 export default {
   // name: 'PageName',
-  data() {
-    return {
-      estatistica: {
-        dia:"00000",
-        totais: "00000"
-      }
-    };
+
+
+  mounted() {
+    this.$store.dispatch("relatos/stats");
   },
+
+  computed: {
+    stats() {
+      return this.$store.state.relatos.stats;
+    },
+  },
+
+
 };
 </script>
 
@@ -84,14 +88,14 @@ export default {
 .borda {
   border-left: 0px solid #dddddd;
   text-align: center;
-  padding: 9px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: normal ;
 }
-.bordas {
-  text-align: center;
-  padding: 9px;
-}
+
 
 .corletra {
   color: #f7f7f7;
+  
 }
 </style>

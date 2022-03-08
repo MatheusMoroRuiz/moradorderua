@@ -1,5 +1,9 @@
 export default function () {
   return {
-    relatos:[]
+    relatos:[],
+
+    //"null" pq stats é objeto
+    stats:null
+
   }
 }
